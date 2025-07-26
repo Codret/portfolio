@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Customize Toast styles (optional) */
+.Toastify__toast--success {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.Toastify__toast--error {
+  background-color: #f44336; /* Red */
+  color: white;
+}
