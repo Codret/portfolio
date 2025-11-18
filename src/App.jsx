@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css'; // Import Toastify styles
 
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [navOpen, setNavOpen] = useState(false);
   // const [state] = useForm("xjkrjpjz");
 
@@ -67,7 +67,7 @@ export default function App() {
     >
       <header className={`p-6 shadow-lg sticky top-0 z-10 ${darkMode ? 'bg-gray-900' : 'bg-white'} transition duration-300`}>
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-extrabold tracking-tight">Codret.dev</h1>
+          <h1 className="text-2xl font-extrabold tracking-tight hover:cursor-pointer" onClick={()=>{"/"}}>AkashWeb.dev</h1>
           <div className="md:hidden">
             <button onClick={() => setNavOpen(!navOpen)}>
               {navOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
@@ -100,7 +100,7 @@ export default function App() {
 
       {/* HERO */}
       <motion.section className="px-6 py-24 text-center" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-        <img src="/profile2.png" alt="Profile" className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-lg" />
+        <img src="/mypic.jpeg" alt="Profile" className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-lg" />
         <h2 className="text-5xl font-extrabold mb-4">Hi, I’m Codret <span className=''>(Akash)</span> 👋</h2>
         <p className="text-xl text-gray-500 dark:text-gray-300 mb-8 max-w-xl mx-auto">
           Freelance Web Developer building modern, fast, responsive websites with React/Next.js & Tailwind.
@@ -155,21 +155,35 @@ export default function App() {
           <h3 className="text-3xl font-bold mb-10 text-center">Featured Projects</h3>
           <div className="grid md:grid-cols-2 gap-10">
             {[{
-              id: 1,
+             id: 1,
+             title: 'Scrut Automation Website',
+             image: "/scrut.png",
+             description: 'Scrut — A modern, security-first GRC (Governance, Risk & Compliance) platform built for cloud-native growth companies. It unifies risk observability, continuous compliance, automated evidence collection and audit readiness—helping teams move fast, stay secure and remain audit-ready at all times.',
+             liveDemo: 'https://www.scrut.io/',
+             codeLink: 'https://github.com/Codret/task_scrut',
+            } ,{
+              id: 2,
+              title: 'Cloud Hybrid Network Yottabyte Defense',
+              image: "/cloud1.png",
+              description: 'A cybersecurity-focused platform offering advanced compliance, risk management, and vulnerability assessment solutions. The website showcases professional services like VAPT certification, ISO compliance audits ',
+              liveDemo: 'https://chnydtrace.in/',
+              codeLink: 'https://github.com/Codret/Digital-cloudhybrid',
+            } ,{
+              id: 3,
               title: 'Real Time Chat Application',
               image: "/p1.png",
               description: 'A Real-Time Chat Application is a web or mobile app that enables users to send and receive messages instantly. It uses technologies like WebSockets, Socket.IO, or Firebase to establish a live connection between clients and the server, ensuring messages appear without needing to refresh the page',
-              liveDemo: '',
+              liveDemo: 'https://chatapp-website-eight-bice-80.vercel.app/',
               codeLink: 'https://github.com/Codret/fullstack-chat-app',
              } , {
-              id: 2,
+              id: 4,
               title: 'Employee Management System App',
               image: "/p2.png",
               description: 'The Employee Management System is a web-based application that allows administrators to manage employees, assign tasks, track task statuses, and monitor productivity. Built with React, it features user authentication, dynamic task assignment, and a responsive dashboard for real-time management.',
               liveDemo: 'https://employement-management-app.vercel.app',
               codeLink: 'https://github.com/Codret/employement-management-app',
              },{
-              id: 3,
+              id: 5,
               title: 'Bakery Website',
               image: "/p3.png",
               description: 'The Bake House is a responsive bakery website built with React and Tailwind CSS. It features a product showcase of delicious cakes, a gallery section, and a simple shopping cart interface. Designed with a clean and modern UI, this project demonstrates component-based architecture and responsive design for an engaging user experience across devices.',
@@ -182,7 +196,7 @@ export default function App() {
                   <h4 className="text-xl font-semibold mb-2 text-amber-50">{project.title}</h4>
                   <p className="mb-4 text-gray-600 dark:text-gray-300">{project.description}.</p>
                   <div className="flex space-x-4">
-                    {/* <a href={`${project.liveDemo}`} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition text-sm" target="_blank" rel="noopener noreferrer">Live Demo</a> */}
+                    <a href={`${project.liveDemo}`} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition text-sm" target="_blank" rel="noopener noreferrer">Live Demo</a>
                     <a href={`${project.codeLink}`} className="px-4 py-2 border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition text-sm" target="_blank" rel="noopener noreferrer">View Code</a>
                   </div>
                 </div>
@@ -209,10 +223,10 @@ export default function App() {
       <section id="about" className="px-6 py-20 text-center">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-3xl font-bold mb-6">About Me</h3>
-          <img src="/profile2.png" alt="Your profile" className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-lg" />
+          <img src="/mypic.jpeg" alt="Your profile" className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-lg" />
           
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            I’m a freelance web developer based in India, working with international clients to build beautiful, responsive, and high-performance websites. I specialize in React and Tailwind CSS.
+            I’m a freelance web developer based in India, working with international clients to build beautiful, responsive, and high-performance websites. I specialize in React and Tailwind CSS, Javascript.
           </p>
         </div>
       </section>
@@ -224,17 +238,17 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-10">
             {[
               {
-                name: "John Doe",
+                name: "Lucas Andersen",
                 quote: "Working with you was a fantastic experience. My website looks stunning and works flawlessly!",
                 image: "https://randomuser.me/api/portraits/men/75.jpg"
               },
               {
-                name: "Jane Smith",
+                name: "Jane Williams",
                 quote: "You delivered everything on time and exceeded expectations. Highly recommend your services!",
                 image: "https://randomuser.me/api/portraits/women/65.jpg"
               },
               {
-                name: "Mark Johnson",
+                name: "Sebastian Müller",
                 quote: "Professional, responsive, and incredibly talented. I’m thrilled with the results.",
                 image: "https://randomuser.me/api/portraits/men/45.jpg"
               },
