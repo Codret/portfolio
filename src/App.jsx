@@ -66,7 +66,7 @@ export default function App() {
     >
       <header className={`p-6 shadow-lg sticky top-0 z-10 ${darkMode ? 'bg-gray-900' : 'bg-white'} transition duration-300`}>
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-extrabold tracking-tight hover:cursor-pointer" onClick={()=>{"/"}}>AkashWeb.dev</h1>
+          <h1 className="text-2xl font-extrabold tracking-tight hover:cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>AkashWeb.dev</h1>
           <div className="md:hidden">
             <button onClick={() => setNavOpen(!navOpen)}>
               {navOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
@@ -99,21 +99,21 @@ export default function App() {
 
       <div className="fixed right-4 bottom-8 z-50">
         <a
-          className="whatsapp-btn flex items-center gap-3 bg-white text-[#00ff26] p-3 rounded-full text-[20px] shadow-lg"
+          className="whatsapp-btn flex items-center gap-3 bg-white text-[#00ff26] p-3 rounded-full text-[20px] shadow-lg hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400"
           href="https://wa.me/917068311385?text=Hi%20Akash!%20I%20saw%20your%20portfolio.%20Would%20love%20to%20talk." 
           target="_blank" rel="noopener noreferrer"
           aria-label="Message on WhatsApp"
         >
           <span className="whatsapp-halo" aria-hidden="true"></span>
-          <span className="text-black text-sm font-semibold whatsapp-pulse">Message me</span>
+          <span className="hidden sm:inline-block text-black text-sm font-semibold whatsapp-pulse">Message me</span>
           <FaWhatsappSquare className="text-3xl whatsapp-pulse" />
         </a>
       </div>
 
       {/* HERO */}
       <motion.section className="px-6 py-24 text-center" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-        <img src="/mypic.jpeg" alt="Profile" className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-lg" />
-        <h2 className="text-5xl font-extrabold mb-4">Hi, I’m Codret <span className=''>(Akash)</span> 👋</h2>
+        <img src="/mypic.jpeg" alt="Profile" className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-emerald-500 shadow-xl" loading="lazy" />
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">Hi, I’m <span className="text-emerald-400">Codret</span> <span className="text-base md:text-lg font-medium text-gray-400">(Akash)</span> 👋</h2>
         <p className="text-xl text-gray-500 dark:text-gray-300 mb-8 max-w-xl mx-auto">
           Freelance Web Developer building modern, fast, responsive websites with React/Next.js & Tailwind.
         </p>
@@ -124,7 +124,7 @@ export default function App() {
             Your browser does not support the video tag.
           </video>
         </div> */}
-        <a href="#contact" className="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition font-medium shadow-lg">
+        <a href="#contact" className="px-8 py-3 bg-gradient-to-r from-emerald-500 to-blue-600 text-white rounded-full hover:from-emerald-600 hover:to-blue-700 transition transform hover:-translate-y-1 font-medium shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400">
           Let’s Work Together
         </a>
         
@@ -205,14 +205,14 @@ export default function App() {
               liveDemo: 'https://bakery-website-tau.vercel.app/',
               codeLink: 'https://github.com/Codret/bakery-website',
              }].map((project, id) => (
-              <motion.div key={id} className="bg-white dark:bg-gray-800 rounded-xl  overflow-hidden shadow-lg hover:shadow-xl transition" whileHover={{ scale: 1.03 }}>
-                <img src={` ${project.image}`} alt={`${project.title}`} className="w-full object-cover h-48" />
+              <motion.div key={id} className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transform transition hover:-translate-y-3 hover:shadow-2xl duration-300" whileHover={{ scale: 1.02 }}>
+                <img src={` ${project.image}`} alt={`${project.title}`} className="w-full object-cover h-56 md:h-48 lg:h-56" loading="lazy" />
                 <div className="p-6">
                   <h4 className="text-xl font-semibold mb-2 text-amber-50">{project.title}</h4>
                   <p className="mb-4 text-gray-600 dark:text-gray-300">{project.description}.</p>
                   <div className="flex space-x-4">
-                    <a href={`${project.liveDemo}`} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition text-sm" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                    <a href={`${project.codeLink}`} className="px-4 py-2 border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition text-sm" target="_blank" rel="noopener noreferrer">View Code</a>
+                    <a href={`${project.liveDemo}`} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                    <a href={`${project.codeLink}`} className="px-4 py-2 border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400" target="_blank" rel="noopener noreferrer">View Code</a>
                   </div>
                 </div>
               </motion.div>

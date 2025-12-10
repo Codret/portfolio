@@ -1,6 +1,20 @@
 @import "tailwindcss";
 
 
+/* Design tokens */
+:root {
+  --accent: #00ff26;
+  --accent-emerald: #10b981;
+  --muted: #6b7280;
+  --card-shadow: 0 12px 30px rgba(2,6,23,0.08);
+}
+
+/* Font smoothing for crisper text */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Enable smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -84,3 +98,37 @@ html {
   70% { transform: scale(1.28); opacity: 0; }
   100% { transform: scale(.92); opacity: 0; }
 }
+
+/* Hover / interactive styles */
+.whatsapp-btn {
+  transition: transform .18s ease, background-color .18s ease, color .18s ease, box-shadow .18s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-6px) scale(1.03);
+  background-color: #00d94a; /* bright green */
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(0,255,38,0.16);
+}
+
+.whatsapp-btn .whatsapp-halo {
+  transition: opacity .18s ease, transform .18s ease, filter .18s ease;
+}
+
+.whatsapp-btn:hover .whatsapp-halo {
+  opacity: 0.95;
+  transform: scale(1.05);
+  filter: blur(4px);
+}
+
+.whatsapp-btn .whatsapp-pulse {
+  transition: transform .18s ease;
+}
+
+.whatsapp-btn:hover .whatsapp-pulse {
+  transform: scale(1.08);
+}
+
+/* Label color control (span inside button) */
+.whatsapp-btn .whatsapp-label { color: #000; }
+.whatsapp-btn:hover .whatsapp-label { color: #fff; }
