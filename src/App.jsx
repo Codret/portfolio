@@ -113,7 +113,7 @@ export default function App() {
       {/* HERO */}
       <motion.section className="px-6 py-24 text-center" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
         <img src="/mypic.jpeg" alt="Profile" className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-emerald-500 shadow-xl" loading="lazy" />
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">Hi, I’m <span className="text-emerald-400">Codret</span> <span className="text-base md:text-lg font-medium text-gray-400">(Akash)</span> 👋</h2>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">Hi, I’m <span className="text-emerald-400">Akash</span> <span className="text-base md:text-lg font-medium text-gray-400">(Codret)</span> 👋</h2>
         <p className="text-xl text-gray-500 dark:text-gray-300 mb-8 max-w-xl mx-auto">
           Freelance Web Developer building modern, fast, responsive websites with React/Next.js & Tailwind.
         </p>
