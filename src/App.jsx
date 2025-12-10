@@ -1,11 +1,10 @@
 // App.jsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaTwitter, FaGithub, FaLinkedin, FaBars, FaTimes, FaInstagram } from 'react-icons/fa';
+import { FaTwitter, FaGithub, FaLinkedin, FaBars, FaTimes, FaInstagram, FaWhatsappSquare } from 'react-icons/fa';
 import { useForm, ValidationError } from '@formspree/react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // Import Toastify styles
-
 
 
 export default function App() {
@@ -98,6 +97,19 @@ export default function App() {
         )}
       </header>
 
+      <div className="fixed right-4 bottom-8 z-50">
+        <a
+          className="whatsapp-btn flex items-center gap-3 bg-white text-[#00ff26] p-3 rounded-full text-[20px] shadow-lg"
+          href="https://wa.me/917068311385?text=Hi%20Akash!%20I%20saw%20your%20portfolio.%20Would%20love%20to%20talk." 
+          target="_blank" rel="noopener noreferrer"
+          aria-label="Message on WhatsApp"
+        >
+          <span className="whatsapp-halo" aria-hidden="true"></span>
+          <span className="text-black text-sm font-semibold whatsapp-pulse">Message me</span>
+          <FaWhatsappSquare className="text-3xl whatsapp-pulse" />
+        </a>
+      </div>
+
       {/* HERO */}
       <motion.section className="px-6 py-24 text-center" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
         <img src="/mypic.jpeg" alt="Profile" className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-lg" />
@@ -105,6 +117,7 @@ export default function App() {
         <p className="text-xl text-gray-500 dark:text-gray-300 mb-8 max-w-xl mx-auto">
           Freelance Web Developer building modern, fast, responsive websites with React/Next.js & Tailwind.
         </p>
+        
         {/* <div className="mb-8">
           <video controls className="mx-auto rounded-2xl shadow-2xl max-w-full w-[480px] border border-gray-300">
             <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
@@ -114,6 +127,7 @@ export default function App() {
         <a href="#contact" className="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition font-medium shadow-lg">
           Let’s Work Together
         </a>
+        
         <div className="flex justify-center space-x-6 mt-8 text-2xl">
           <a href="https://x.com/Codeyet_" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400"><FaTwitter /></a>
           <a href="https://github.com/Codret" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300"><FaGithub /></a>
@@ -121,6 +135,7 @@ export default function App() {
           <a href="https://www.instagram.com/real_codret/" target="_blank" rel="noopener noreferrer" className="hover:text-red-600"><FaInstagram /></a>
         </div>
       </motion.section>
+
 
             {/* SKILLS SECTION */}
       {/* <section className="px-6 py-20 bg-white dark:bg-gray-400 text-white"> */}
